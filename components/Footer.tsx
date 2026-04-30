@@ -17,7 +17,7 @@ export default function Footer() {
         </a>
       </div>
       <p className="mt-4 text-xs text-[rgba(255,255,255,0.5)]">
-        © 2024 Moyocochita. Todos los derechos reservados.
+        © 2026 Urbanización Moyocochita. Todos los derechos reservados.
       </p>
     </footer>
   );

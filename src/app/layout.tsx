@@ -1,24 +1,12 @@
 import type { Metadata } from "next";
-import { DM_Sans, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
-const dmSans = DM_Sans({
-  subsets: ["latin"],
-  variable: "--font-sans",
-  display: "swap",
-});
-
-const playfairDisplay = Playfair_Display({
-  subsets: ["latin"],
-  variable: "--font-serif",
-  display: "swap",
-  weight: ["400", "700", "900"],
-  style: ["normal", "italic"],
-});
-
 export const metadata: Metadata = {
-  title: "Urbanización Moyocochita — Lotes junto al Colegio 25 de Mayo",
-  description: "El único lugar en Camargo donde tus hijos tienen el colegio a pasos de casa. Lotes de alta plusvalía con servicios básicos y papeles al día.",
+  title: "Urbanización Moyocochita | Inversión en Camargo",
+  description: "Lotes de terreno en Camargo, Chuquisaca. Listos para invertir y vivir en la Urbanización Moyocochita.",
+  icons: {
+    icon: "/urbanizacion-moyocochita.png",
+  },
 };
 
 export default function RootLayout({
@@ -28,7 +16,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className={`${dmSans.variable} ${playfairDisplay.variable} font-sans`}>
+      <head>
+        <link
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+          rel="stylesheet"
+        />
+      </head>
+      <body className="text-slate-900">
         {children}
       </body>
     </html>

@@ -1,49 +1,33 @@
-import React from 'react';
-
 export default function HeroSection() {
-  const scrollToForm = (e: React.MouseEvent) => {
-    e.preventDefault();
-    document.getElementById('formulario')?.scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
-    <section className="min-h-[100svh] flex flex-col justify-end p-0 relative overflow-hidden bg-gradient-to-br from-[#1C4422] via-[#2D6A35] to-[#4A9A57]">
-      <div className="absolute inset-0" style={{
-        backgroundImage: 'radial-gradient(circle at 20% 20%, rgba(255,255,255,0.04) 1px, transparent 1px), radial-gradient(circle at 80% 80%, rgba(255,255,255,0.04) 1px, transparent 1px)',
-        backgroundSize: '40px 40px'
-      }}></div>
-      
-      <div className="relative z-2 px-6 pb-20 pt-10 fade-in">
-        <div className="inline-flex items-center gap-1.5 bg-[rgba(201,151,28,0.2)] border border-[#C9971C] text-[#F0C040] rounded-full px-3.5 py-1.5 text-xs font-semibold tracking-[0.08em] uppercase mb-4">
-          <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><circle cx="5" cy="5" r="5" fill="#C9971C"/></svg>
-          Camargo, Chuquisaca · Preventa Activa
+    <section id="inicio" className="hero-section min-h-screen flex items-center justify-center pt-20 px-4 sm:px-6">
+      <div className="max-w-5xl text-center">
+        <div className="inline-flex items-center space-x-2 bg-white/20 backdrop-blur-md px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-white/30 text-white mb-6 sm:mb-8">
+          <span className="w-2 h-2 bg-yellow-400 rounded-full animate-ping"></span>
+          <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-yellow-100">
+            Disponibilidad Inmediata
+          </span>
         </div>
-        
-        <h1 className="font-serif text-[clamp(2rem,7vw,3rem)] font-black text-white leading-[1.15] mb-4">
-          El único lugar donde tus hijos <em className="font-serif italic text-[#F0C040]">caminan al colegio</em> desde casa
+        <h1 className="text-3xl sm:text-5xl md:text-8xl font-extrabold text-white mb-6 sm:mb-8 leading-none">
+          Lotes de Terreno <br /> en <span className="text-yellow-400">Camargo</span>
         </h1>
-        
-        <p className="text-[rgba(255,255,255,0.82)] text-base leading-[1.6] mb-8 max-w-[480px]">
-          Urbanización Moyocochita — lotes de alta plusvalía con el Colegio 25 de Mayo dentro del predio, servicios básicos y seguridad jurídica garantizada.
+        <p className="text-base sm:text-xl md:text-2xl text-blue-50 mb-8 sm:mb-12 max-w-2xl mx-auto font-light leading-relaxed px-2">
+          Listos para invertir y vivir en la <strong>Urbanización Moyocochita</strong>. Calidad de vida en el Chaco boliviano.
         </p>
-        
-        <a
-          href="#formulario"
-          onClick={scrollToForm}
-          className="inline-flex items-center gap-2.5 bg-[#C9971C] text-[#1C4422] font-bold text-base px-7 py-4 rounded-full no-underline shadow-[0_4px_20px_rgba(201,151,28,0.4)] hover:-translate-y-0.5 hover:shadow-[0_8px_28px_rgba(201,151,28,0.5)] transition-all duration-200"
-        >
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014 11.74 19.79 19.79 0 01.92 3.1 2 2 0 012.9.93h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
-          </svg>
-          Ver Lotes Disponibles
-        </a>
-      </div>
-      
-      <div className="absolute bottom-7 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 text-[rgba(255,255,255,0.5)] text-[11px] tracking-[0.06em] uppercase" style={{ animation: 'bounce 2.5s infinite' }}>
-        <span>Ver más</span>
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-          <path d="M12 5v14M5 12l7 7 7-7"/>
-        </svg>
+        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center px-4">
+          <a
+            href="https://wa.me/59175525618?text=Hola%20me%20interesa%20solicitar%20informacion%20sobre%20los%20lotes%20de%20la%20Urbanizacion%20Moyocochita" target="_blank" rel="noopener noreferrer"
+            className="btn-shine bg-yellow-400 text-blue-900 font-extrabold px-6 sm:px-10 py-4 sm:py-5 rounded-2xl shadow-2xl hover:shadow-yellow-400/20 transition-all text-sm sm:text-lg flex items-center justify-center"
+          >
+            SOLICITAR INFORMACIÓN <i className="fas fa-arrow-right ml-2 sm:ml-3 text-xs sm:text-sm"></i>
+          </a>
+          <a
+            href="#galeria"
+            className="bg-white/10 backdrop-blur-md text-white border border-white/40 font-bold px-6 sm:px-10 py-4 sm:py-5 rounded-2xl hover:bg-white/20 transition text-sm sm:text-lg"
+          >
+            VER PLANO DE LOTES
+          </a>
+        </div>
       </div>
     </section>
   );

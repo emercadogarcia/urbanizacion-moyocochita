@@ -1,66 +1,59 @@
-import React from 'react';
-
 export default function GallerySection() {
-  const slides = [
-    {
-      emoji: '🏞️',
-      title: 'Arco de ingreso',
-      desc: 'Entrada principal pavimentada con señalización'
-    },
-    {
-      emoji: '🌿',
-      title: 'Lotes demarcados',
-      desc: 'Cada lote con estacas y límites definidos'
-    },
-    {
-      emoji: '🏫',
-      title: 'Colegio 25 de Mayo',
-      desc: 'Infraestructura educativa dentro del predio'
-    },
-    {
-      emoji: '🌳',
-      title: 'Espacios verdes',
-      desc: 'Zona de esparcimiento familiar planificada'
-    },
-    {
-      emoji: '🗺️',
-      title: 'Vista panorámica',
-      desc: 'Ubicación estratégica en Camargo'
-    }
-  ];
-
   return (
-    <section className="py-[60px] px-0 bg-[#1C4422] fade-in">
-      <div className="mx-auto max-w-[1120px] px-6 pb-8">
-        <div className="text-[11px] font-semibold tracking-[0.1em] uppercase text-[#F0C040] mb-2">Imágenes reales del terreno</div>
-        <h2 className="font-serif text-[clamp(1.75rem,5vw,2.4rem)] font-bold leading-[1.2] text-white">Ve lo que estás comprando</h2>
-      </div>
-
-      <div className="flex gap-4 overflow-x-auto scroll-smooth px-6 pb-4 scrollbar-hide snap-x snap-mandatory md:grid md:grid-cols-3 md:overflow-visible md:snap-none md:px-0 md:pb-0">
-        {slides.map((slide, index) => (
-          <div
-            key={index}
-            className="min-w-[78vw] max-w-[340px] snap-center rounded-3xl overflow-hidden bg-[rgba(255,255,255,0.12)] backdrop-blur-sm border border-[rgba(255,255,255,0.18)] md:min-w-0 md:max-w-none"
-          >
-            <div className="h-[180px] bg-[rgba(255,255,255,0.08)] flex items-center justify-center overflow-hidden">
-              <div className="text-center text-[rgba(255,255,255,0.65)]">
-                <span className="text-4xl block mb-1.5">{slide.emoji}</span>
-                <p className="text-xs">{slide.title}</p>
+    <section id="galeria" className="py-16 sm:py-24 bg-slate-900 text-white overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
+        <div className="relative group order-2 md:order-1">
+          <div className="absolute -inset-4 bg-yellow-400/20 rounded-[2rem] md:rounded-[3rem] blur-2xl group-hover:bg-yellow-400/30 transition duration-500"></div>
+          <div className="relative bg-white p-2 rounded-[1.5rem] md:rounded-[2rem] shadow-2xl overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1524813686514-a57563d77965?auto=format&fit=crop&q=80"
+              alt="Mapa de Lotes Moyocochita"
+              className="w-full h-auto rounded-[1.2rem] md:rounded-[1.8rem] opacity-90"
+            />
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="bg-blue-900/90 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full font-bold text-xs sm:text-sm flex items-center">
+                <i className="fas fa-search-plus mr-2"></i> VER PLANO DETALLADO
               </div>
             </div>
-            <div className="p-3.5 px-4">
-              <h4 className="text-sm font-semibold text-white mb-1">{slide.title}</h4>
-              <p className="text-xs text-[rgba(255,255,255,0.75)]">{slide.desc}</p>
+          </div>
+        </div>
+        <div className="order-1 md:order-2">
+          <h2 className="text-yellow-400 text-xs sm:text-sm font-black uppercase tracking-[0.2em] sm:tracking-[0.3em] mb-3 sm:mb-4">
+            Disponibilidad
+          </h2>
+          <h3 className="text-2xl sm:text-4xl md:text-6xl font-extrabold mb-6 sm:mb-8 leading-none">
+            Distribución Planificada
+          </h3>
+          <p className="text-base sm:text-xl text-slate-300 mb-8 sm:mb-10 font-light leading-relaxed">
+            Contamos con lotes de diversas dimensiones, todos con acceso directo a calles internas proyectadas, garantizando una excelente ventilación y asoleamiento.
+          </p>
+          <div className="space-y-4 sm:space-y-6">
+            <div className="flex items-center space-x-3 sm:space-x-4 border-b border-white/10 pb-3 sm:pb-4">
+              <span className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-yellow-400 flex items-center justify-center text-blue-900 font-bold text-sm sm:text-base">
+                01
+              </span>
+              <span className="text-sm sm:text-lg font-semibold">
+                Calles internas proyectadas
+              </span>
+            </div>
+            <div className="flex items-center space-x-3 sm:space-x-4 border-b border-white/10 pb-3 sm:pb-4">
+              <span className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-yellow-400 flex items-center justify-center text-blue-900 font-bold text-sm sm:text-base">
+                02
+              </span>
+              <span className="text-sm sm:text-lg font-semibold">
+                Áreas verdes recreativas
+              </span>
+            </div>
+            <div className="flex items-center space-x-3 sm:space-x-4 border-b border-white/10 pb-3 sm:pb-4">
+              <span className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-yellow-400 flex items-center justify-center text-blue-900 font-bold text-sm sm:text-base">
+                03
+              </span>
+              <span className="text-sm sm:text-lg font-semibold">
+                Cercanía a centros de servicio
+              </span>
             </div>
           </div>
-        ))}
-      </div>
-
-      <div className="text-center mt-4 px-6 text-[rgba(255,255,255,0.45)] text-xs flex items-center justify-center gap-2 md:px-0">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-          <path d="M5 12h14M12 5l7 7-7 7" />
-        </svg>
-        Desliza para ver más fotos
+        </div>
       </div>
     </section>
   );

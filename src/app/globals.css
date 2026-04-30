@@ -2,81 +2,62 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap');
+
 :root {
-  --verde: #2D6A35;
-  --verde-claro: #4A9A57;
-  --verde-oscuro: #1C4422;
-  --tierra: #8B5E3C;
-  --tierra-claro: #C4956A;
-  --crema: #F8F2E6;
-  --crema-oscuro: #EDE4D0;
-  --dorado: #C9971C;
-  --dorado-claro: #F0C040;
-  --texto: #1A1A1A;
-  --texto-suave: #5A5A5A;
-  --blanco: #FFFFFF;
-  --radio: 12px;
-  --sombra: 0 4px 24px rgba(0,0,0,0.12);
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
+  --brand-blue: #1e3a8a;
+  --brand-yellow: #facc15;
 }
 
 body {
-  background: var(--crema);
-  color: var(--texto);
-  overflow-x: hidden;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  scroll-behavior: smooth;
+  background-color: #f8fafc;
 }
 
-@keyframes pulse-wa {
-  0%, 100% {
-    box-shadow: 0 6px 28px rgba(37,211,102,0.45), 0 0 0 0 rgba(37,211,102,0.5);
-  }
-  50% {
-    box-shadow: 0 6px 28px rgba(37,211,102,0.45), 0 0 0 12px rgba(37,211,102,0);
-  }
+.glass {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-@keyframes bounce {
-  0%, 100% {
-    transform: translateX(-50%) translateY(0);
-  }
-  50% {
-    transform: translateX(-50%) translateY(6px);
-  }
+.hero-section {
+  background: linear-gradient(rgba(30, 58, 138, 0.7), rgba(30, 58, 138, 0.5)),
+              url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
-@keyframes fill-progress {
-  from {
-    width: 0;
-  }
+.card-hover {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@keyframes fade-in {
-  from {
-    opacity: 0;
-    transform: translateY(24px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.card-hover:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
-.fade-in {
+.btn-shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-shine::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: rotate(45deg);
+  transition: 0.5s;
   opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-.fade-in.visible {
+.btn-shine:hover::after {
   opacity: 1;
-  transform: translateY(0);
+  left: 120%;
 }

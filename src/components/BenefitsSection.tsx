@@ -1,56 +1,49 @@
-import React from 'react';
-
 export default function BenefitsSection() {
   return (
-    <section className="py-[60px] px-6 bg-[#F8F2E6] fade-in">
-      <div className="mx-auto max-w-[1120px]">
-        <div className="text-[11px] font-semibold tracking-[0.1em] uppercase text-[#2D6A35] mb-2">Todo incluido</div>
-        <h2 className="font-serif text-[clamp(1.75rem,5vw,2.4rem)] font-bold leading-[1.2] mb-4 text-[#1C4422]">4 razones para decidir hoy</h2>
-
-        <div className="grid gap-4 mt-8 sm:grid-cols-2">
-          {[
-            {
-              icon: '🛣️',
-              title: 'Acceso directo',
-              description: 'Calle pavimentada de ingreso exclusiva para la urbanización'
-            },
-            {
-              icon: '💧',
-              title: 'Agua y Luz',
-              description: 'Servicios básicos con trámite inmediato a tu nombre'
-            },
-            {
-              icon: '📄',
-              title: 'Seguridad jurídica',
-              description: 'Escrituras individuales al día — cero riesgo legal'
-            },
-            {
-              icon: '🌳',
-              title: 'Áreas verdes',
-              description: 'Espacios de esparcimiento y arborización planificada'
-            }
-          ].map((item) => (
-            <div key={item.title} className="bg-white rounded-[18px] p-5 shadow-[0_2px_16px_rgba(0,0,0,0.08)] hover:-translate-y-0.5 transition-transform duration-200">
-              <div className="w-12 h-12 rounded-2xl bg-[#EDE4D0] flex items-center justify-center text-2xl mb-3">{item.icon}</div>
-              <h4 className="text-sm font-semibold text-[#1C4422] mb-1">{item.title}</h4>
-              <p className="text-xs text-[#5A5A5A] leading-[1.6]">{item.description}</p>
-            </div>
-          ))}
+    <section id="beneficios" className="py-16 sm:py-24 px-4 sm:px-6">
+      <div className="max-w-7xl mx-auto">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-12 sm:mb-16 gap-4">
+          <div className="max-w-xl">
+            <h2 className="text-blue-900 text-xs sm:text-sm font-black uppercase tracking-[0.2em] sm:tracking-[0.3em] mb-3 sm:mb-4">
+              ¿Por qué invertir aquí?
+            </h2>
+            <p className="text-2xl sm:text-4xl md:text-5xl font-extrabold leading-tight">
+              Tu terreno en la zona con mayor proyección
+            </p>
+          </div>
+          <p className="text-gray-500 text-sm sm:text-lg max-w-sm">
+            La Urbanización Moyocochita ofrece la combinación perfecta entre naturaleza, seguridad y retorno de inversión.
+          </p>
         </div>
 
-        <div className="bg-gradient-to-br from-[#1C4422] to-[#2D6A35] rounded-3xl p-6 mt-8 text-center sm:p-8">
-          <p className="text-white text-[15px] leading-[1.7] mb-4">
-            <strong className="text-[#F0C040]">No vendemos promesas.</strong><br />
-            Vendemos lotes demarcados, listos para transferencia inmediata.
-          </p>
-          <a
-            href="https://wa.me/59170000000?text=Hola%2C%20quiero%20ver%20el%20cat%C3%A1logo%20de%20lotes%20y%20planos%20de%20Moyocochita"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-white text-[#1C4422] font-bold text-sm px-6 py-3 rounded-full no-underline hover:scale-105 transition-transform"
-          >
-            📋 Recibir catálogo de planos
-          </a>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-10">
+          <div className="card-hover bg-white p-6 sm:p-10 rounded-2xl sm:rounded-[2.5rem] border border-gray-100">
+            <div className="w-12 h-12 sm:w-16 sm:h-16 bg-blue-50 rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 sm:mb-8">
+              <i className="fas fa-home text-blue-900 text-xl sm:text-2xl"></i>
+            </div>
+            <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Lotes Listos para Vivir</h3>
+            <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+              Urbanización diseñada con calles amplias y distribución organizada para tu comodidad.
+            </p>
+          </div>
+          <div className="card-hover bg-white p-6 sm:p-10 rounded-2xl sm:rounded-[2.5rem] border border-gray-100">
+            <div className="w-12 h-12 sm:w-16 sm:h-16 bg-yellow-50 rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 sm:mb-8">
+              <i className="fas fa-seedling text-yellow-600 text-xl sm:text-2xl"></i>
+            </div>
+            <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Entorno Productivo</h3>
+            <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+              Camargo es tierra de sol y vino, un municipio próspero con un futuro brillante.
+            </p>
+          </div>
+          <div className="card-hover bg-white p-6 sm:p-10 rounded-2xl sm:rounded-[2.5rem] border border-gray-100">
+            <div className="w-12 h-12 sm:w-16 sm:h-16 bg-blue-50 rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 sm:mb-8">
+              <i className="fas fa-shield-alt text-blue-900 text-xl sm:text-2xl"></i>
+            </div>
+            <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Inversión Patrimonial</h3>
+            <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+              Asegura el futuro de tu familia adquiriendo bienes raíces en una zona de expansión.
+            </p>
+          </div>
         </div>
       </div>
     </section>
