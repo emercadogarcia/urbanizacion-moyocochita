@@ -5,16 +5,14 @@ export default function GallerySection() {
         <div className="relative group order-2 md:order-1">
           <div className="absolute -inset-4 bg-yellow-400/20 rounded-[2rem] md:rounded-[3rem] blur-2xl group-hover:bg-yellow-400/30 transition duration-500"></div>
           <div className="relative bg-white p-2 rounded-[1.5rem] md:rounded-[2rem] shadow-2xl overflow-hidden">
-            <img
-              src="https://images.unsplash.com/photo-1524813686514-a57563d77965?auto=format&fit=crop&q=80"
-              alt="Mapa de Lotes Moyocochita"
-              className="w-full h-auto rounded-[1.2rem] md:rounded-[1.8rem] opacity-90"
-            />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="bg-blue-900/90 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full font-bold text-xs sm:text-sm flex items-center">
-                <i className="fas fa-search-plus mr-2"></i> VER PLANO DETALLADO
-              </div>
-            </div>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15000!2d-65.21!3d-20.64!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93e38c7e0e2a3f6d%3A0x9f25b4e0e0b4b0b0!2sCamargo%2C%20Chuquisaca!5e1!3m2!1ses!2sbo!4v1"
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="w-full h-[300px] sm:h-[400px] md:h-[500px] rounded-[1.2rem] md:rounded-[1.8rem] border-0"
+              title="Ubicación Urbanización Moyocochita - Camargo, Chuquisaca"
+            ></iframe>
           </div>
         </div>
         <div className="order-1 md:order-2">
