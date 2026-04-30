@@ -27,7 +27,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-100 pt-8 sm:pt-12 text-gray-400 text-xs sm:text-sm flex flex-col md:flex-row justify-between items-center gap-4 sm:gap-6">
           <div className="flex items-center space-x-2">
-            <span className="font-black text-blue-900 uppercase text-sm sm:text-base">Moyocochita</span>
+            <span className="font-black text-blue-900 uppercase text-sm sm:text-base">Urbanización Moyocochita</span>
             <span className="text-xs sm:text-sm">&copy; 2026 Camargo, Chuquisaca</span>
           </div>
           <div className="flex space-x-4 sm:space-x-6">
