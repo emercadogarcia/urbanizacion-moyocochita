@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Urbanización Moyocochita — Lotes junto al Colegio 25 de Mayo</title>
+<meta name="description" content="El único lugar en Camargo donde tus hijos tienen el colegio a pasos de casa. Lotes de alta plusvalía con servicios básicos y papeles al día.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --verde: #2D6A35;
+    --verde-claro: #4A9A57;
+    --verde-oscuro: #1C4422;
+    --tierra: #8B5E3C;
+    --tierra-claro: #C4956A;
+    --crema: #F8F2E6;
+    --crema-oscuro: #EDE4D0;
+    --dorado: #C9971C;
+    --dorado-claro: #F0C040;
+    --texto: #1A1A1A;
+    --texto-suave: #5A5A5A;
+    --blanco: #FFFFFF;
+    --radio: 12px;
+    --sombra: 0 4px 24px rgba(0,0,0,0.12);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--crema);
+    color: var(--texto);
+    overflow-x: hidden;
+  }
+
+  /* ── WHATSAPP FLOTANTE ── */
+  .wa-float {
+    position: fixed;
+    bottom: 24px;
+    right: 20px;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #25D366;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    padding: 14px 20px;
+    font-size: 15px;
+    font-weight: 600;
+    box-shadow: 0 6px 28px rgba(37,211,102,0.45);
+    animation: pulse-wa 2s infinite;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .wa-float:hover { transform: scale(1.05); box-shadow: 0 8px 36px rgba(37,211,102,0.6); }
+  .wa-float svg { width: 22px; height: 22px; flex-shrink: 0; }
+  @keyframes pulse-wa {
+    0%, 100% { box-shadow: 0 6px 28px rgba(37,211,102,0.45), 0 0 0 0 rgba(37,211,102,0.5); }
+    50% { box-shadow: 0 6px 28px rgba(37,211,102,0.45), 0 0 0 12px rgba(37,211,102,0); }
+  }
+
+  /* ── HERO ── */
+  .hero {
+    background: linear-gradient(160deg, var(--verde-oscuro) 0%, var(--verde) 55%, var(--verde-claro) 100%);
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-pattern {
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle at 20% 20%, rgba(255,255,255,0.04) 1px, transparent 1px),
+      radial-gradient(circle at 80% 80%, rgba(255,255,255,0.04) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(201,151,28,0.2);
+    border: 1px solid var(--dorado);
+    color: var(--dorado-claro);
+    border-radius: 50px;
+    padding: 6px 14px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 40px 24px 80px;
+  }
+
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 7vw, 3rem);
+    font-weight: 900;
+    color: white;
+    line-height: 1.15;
+    margin-bottom: 16px;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--dorado-claro);
+  }
+
+  .hero-sub {
+    color: rgba(255,255,255,0.82);
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 32px;
+    max-width: 480px;
+  }
+
+  .hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--dorado);
+    color: var(--verde-oscuro);
+    font-weight: 700;
+    font-size: 16px;
+    padding: 16px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 4px 20px rgba(201,151,28,0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .hero-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(201,151,28,0.5); }
+
+  .hero-scroll {
+    position: absolute;
+    bottom: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    color: rgba(255,255,255,0.5);
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    animation: bounce 2.5s infinite;
+  }
+  @keyframes bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(6px); }
+  }
+
+  /* ── SCARCITY BAR ── */
+  .scarcity-bar {
+    background: var(--verde-oscuro);
+    color: white;
+    text-align: center;
+    padding: 12px 20px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+  }
+  .scarcity-bar strong { color: var(--dorado-claro); }
+
+  /* ── SECCIÓN TRUST ── */
+  .section { padding: 60px 24px; }
+  .section-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--verde);
+    margin-bottom: 8px;
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.6rem, 5vw, 2.2rem);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    color: var(--verde-oscuro);
+  }
+  .section-desc {
+    color: var(--texto-suave);
+    font-size: 15px;
+    line-height: 1.7;
+    max-width: 540px;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 36px;
+  }
+
+  .stat-card {
+    background: white;
+    border-radius: var(--radio);
+    padding: 20px 16px;
+    box-shadow: var(--sombra);
+    text-align: center;
+    border-top: 4px solid var(--verde);
+  }
+  .stat-card.gold { border-top-color: var(--dorado); }
+  .stat-card .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--verde-oscuro);
+    line-height: 1;
+    display: block;
+    margin-bottom: 4px;
+  }
+  .stat-card .num.gold-num { color: var(--tierra); }
+  .stat-card .lbl { font-size: 12px; color: var(--texto-suave); font-weight: 500; line-height: 1.4; }
+
+  /* ── COLEGIO ── */
+  .colegio-section {
+    background: white;
+    padding: 60px 24px;
+  }
+
+  .mapa-ilustrado {
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+    border-radius: 16px;
+    padding: 28px;
+    margin-top: 32px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .mapa-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .mapa-lote {
+    background: white;
+    border-radius: 10px;
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  }
+
+  .mapa-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 22px;
+  }
+  .icon-verde { background: #e8f5e9; }
+  .icon-azul { background: #e3f2fd; }
+  .icon-dorado { background: #fff8e1; }
+
+  .mapa-lote-text h4 { font-size: 14px; font-weight: 600; color: var(--verde-oscuro); }
+  .mapa-lote-text p { font-size: 12px; color: var(--texto-suave); margin-top: 2px; }
+
+  .mapa-connector {
+    display: flex;
+    align-items: center;
+    padding: 0 22px;
+    gap: 4px;
+    color: var(--verde);
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .conn-line {
+    flex: 1;
+    height: 2px;
+    background: repeating-linear-gradient(90deg, var(--verde) 0, var(--verde) 6px, transparent 6px, transparent 12px);
+  }
+
+  .highlight-pill {
+    background: var(--verde);
+    color: white;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 8px;
+  }
+
+  /* ── BENEFICIOS ── */
+  .beneficios-section {
+    background: var(--crema);
+    padding: 60px 24px;
+  }
+
+  .beneficios-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin-top: 32px;
+  }
+
+  .ben-card {
+    background: white;
+    border-radius: var(--radio);
+    padding: 20px 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    transition: transform 0.2s;
+  }
+  .ben-card:hover { transform: translateY(-3px); }
+
+  .ben-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: var(--crema-oscuro);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    margin-bottom: 12px;
+  }
+
+  .ben-card h4 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--verde-oscuro);
+    margin-bottom: 4px;
+  }
+  .ben-card p { font-size: 12px; color: var(--texto-suave); line-height: 1.5; }
+
+  /* ── GALERÍA ── */
+  .galeria-section { padding: 60px 0; background: var(--verde-oscuro); }
+  .galeria-header { padding: 0 24px 32px; }
+  .galeria-header .section-label { color: var(--dorado-claro); }
+  .galeria-header .section-title { color: white; }
+
+  .slider-track {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 0 24px 16px;
+    scrollbar-width: none;
+  }
+  .slider-track::-webkit-scrollbar { display: none; }
+
+  .slide-card {
+    flex: 0 0 78vw;
+    max-width: 340px;
+    scroll-snap-align: center;
+    border-radius: 16px;
+    overflow: hidden;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255,255,255,0.15);
+  }
+
+  .slide-img {
+    height: 180px;
+    background: rgba(255,255,255,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .slide-img-placeholder {
+    text-align: center;
+    color: rgba(255,255,255,0.5);
+  }
+  .slide-img-placeholder span { font-size: 36px; display: block; margin-bottom: 6px; }
+  .slide-img-placeholder p { font-size: 12px; }
+
+  .slide-body { padding: 14px 16px; }
+  .slide-body h4 { font-size: 14px; font-weight: 600; color: white; margin-bottom: 4px; }
+  .slide-body p { font-size: 12px; color: rgba(255,255,255,0.6); }
+
+  .slider-hint {
+    text-align: center;
+    margin-top: 16px;
+    padding: 0 24px;
+    color: rgba(255,255,255,0.4);
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  /* ── CIERRE / SCARCITY ── */
+  .cierre-section {
+    background: linear-gradient(135deg, var(--tierra) 0%, #6B4226 100%);
+    padding: 60px 24px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .cierre-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle at 30% 70%, rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size: 30px 30px;
+  }
+  .cierre-section .section-label { color: var(--dorado-claro); }
+  .cierre-section .section-title { color: white; }
+  .cierre-desc { color: rgba(255,255,255,0.8); font-size: 15px; line-height: 1.7; margin-bottom: 32px; }
+
+  .lotes-counter {
+    background: rgba(0,0,0,0.2);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: var(--radio);
+    padding: 24px;
+    margin: 32px 0;
+  }
+  .lotes-counter .big-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: var(--dorado-claro);
+    line-height: 1;
+  }
+  .lotes-counter p { color: rgba(255,255,255,0.7); font-size: 14px; margin-top: 6px; }
+
+  .progress-bar-wrap {
+    background: rgba(0,0,0,0.3);
+    border-radius: 50px;
+    height: 10px;
+    margin: 16px 0 8px;
+    overflow: hidden;
+  }
+  .progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--dorado), var(--dorado-claro));
+    border-radius: 50px;
+    width: 73%;
+    animation: fill-progress 1.5s ease-out;
+  }
+  @keyframes fill-progress { from { width: 0; } }
+  .progress-label { display: flex; justify-content: space-between; font-size: 11px; color: rgba(255,255,255,0.5); }
+
+  .cierre-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #25D366;
+    color: white;
+    font-weight: 700;
+    font-size: 17px;
+    padding: 18px 32px;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 6px 24px rgba(37,211,102,0.4);
+    transition: transform 0.2s;
+    width: 100%;
+    justify-content: center;
+    margin-top: 8px;
+  }
+  .cierre-cta:hover { transform: scale(1.02); }
+
+  .precio-note {
+    margin-top: 16px;
+    color: rgba(255,255,255,0.55);
+    font-size: 13px;
+  }
+
+  /* ── FORMULARIO ── */
+  .form-section {
+    background: white;
+    padding: 60px 24px;
+  }
+
+  .form-card {
+    background: var(--crema);
+    border-radius: 16px;
+    padding: 32px 24px;
+    border: 1px solid var(--crema-oscuro);
+    margin-top: 32px;
+  }
+
+  .form-group { margin-bottom: 16px; }
+  .form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--verde-oscuro);
+    margin-bottom: 6px;
+  }
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    padding: 13px 16px;
+    border: 1.5px solid var(--crema-oscuro);
+    border-radius: 10px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    color: var(--texto);
+    background: white;
+    transition: border-color 0.2s;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  .form-group select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%235A5A5A' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    padding-right: 36px;
+  }
+  .form-group input:focus,
+  .form-group select:focus {
+    outline: none;
+    border-color: var(--verde);
+    box-shadow: 0 0 0 3px rgba(45,106,53,0.12);
+  }
+
+  .form-submit {
+    width: 100%;
+    padding: 16px;
+    background: var(--verde);
+    color: white;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background 0.2s, transform 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  .form-submit:hover { background: var(--verde-oscuro); transform: translateY(-1px); }
+
+  .form-privacy {
+    text-align: center;
+    margin-top: 12px;
+    font-size: 12px;
+    color: var(--texto-suave);
+  }
+
+  /* Confirmación */
+  .form-success {
+    display: none;
+    text-align: center;
+    padding: 20px;
+  }
+  .form-success .success-icon { font-size: 48px; margin-bottom: 12px; }
+  .form-success h3 { font-family: 'Playfair Display', serif; color: var(--verde-oscuro); margin-bottom: 8px; }
+  .form-success p { color: var(--texto-suave); font-size: 14px; line-height: 1.6; }
+
+  /* ── MAPA ── */
+  .mapa-section {
+    padding: 60px 24px;
+    background: var(--crema-oscuro);
+  }
+
+  .mapa-embed {
+    margin-top: 28px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--sombra);
+    height: 280px;
+  }
+
+  .mapa-embed iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  .mapa-placeholder {
+    height: 280px;
+    background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 12px;
+    color: var(--verde-oscuro);
+    margin-top: 28px;
+  }
+  .mapa-placeholder span { font-size: 40px; }
+  .mapa-placeholder p { font-size: 14px; font-weight: 600; }
+  .mapa-placeholder small { font-size: 12px; color: var(--verde); }
+
+  .como-llegar {
+    margin-top: 20px;
+    background: white;
+    border-radius: 12px;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .como-llegar span { font-size: 28px; flex-shrink: 0; }
+  .como-llegar div h4 { font-size: 14px; font-weight: 600; color: var(--verde-oscuro); }
+  .como-llegar div p { font-size: 13px; color: var(--texto-suave); margin-top: 2px; line-height: 1.5; }
+
+  /* ── PIE ── */
+  footer {
+    background: var(--verde-oscuro);
+    color: rgba(255,255,255,0.7);
+    text-align: center;
+    padding: 36px 24px;
+    font-size: 13px;
+    line-height: 1.8;
+  }
+  footer strong { color: white; }
+  footer .footer-links { margin-top: 12px; display: flex; justify-content: center; gap: 20px; }
+  footer .footer-links a { color: var(--dorado-claro); text-decoration: none; font-size: 13px; }
+
+  /* ── ANIMACIONES DE ENTRADA ── */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+  /* ── TOAST NOTIFICACIÓN ── */
+  .toast {
+    position: fixed;
+    bottom: 90px;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background: var(--verde-oscuro);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 500;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+    z-index: 998;
+    white-space: nowrap;
+    pointer-events: none;
+  }
+  .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+  /* ── RESPONSIVE DESKTOP ── */
+  @media (min-width: 768px) {
+    .hero-content { padding: 80px 48px 100px; max-width: 680px; }
+    .section, .colegio-section, .beneficios-section, .form-section { padding: 80px 48px; }
+    .cierre-section { padding: 80px 48px; }
+    .stats-grid { grid-template-columns: repeat(4, 1fr); }
+    .beneficios-grid { grid-template-columns: repeat(2, 1fr); }
+    .slide-card { flex: 0 0 320px; }
+
+    .mapa-section { padding: 80px 48px; }
+    .galeria-header { padding: 0 48px 32px; }
+    .slider-track { padding: 0 48px 16px; }
+    .form-card { max-width: 540px; margin: 32px auto 0; }
+    .lotes-counter .big-num { font-size: 5rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- WhatsApp flotante -->
+<a href="https://wa.me/59170000000?text=Hola%2C%20vi%20la%20web%20de%20Moyocochita%20y%20quiero%20informaci%C3%B3n%20sobre%20lotes%20disponibles" class="wa-float" target="_blank" rel="noopener">
+  <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+  </svg>
+  Consultar Lotes
+</a>
+
+<div class="toast" id="toast">✓ Abriendo WhatsApp...</div>
+
+<!-- ══ HERO ══ -->
+<section class="hero">
+  <div class="hero-pattern"></div>
+  <div class="hero-content fade-in">
+    <div class="hero-badge">
+      <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><circle cx="5" cy="5" r="5" fill="#C9971C"/></svg>
+      Camargo, Chuquisaca · Preventa Activa
+    </div>
+    <h1>El único lugar donde tus hijos <em>caminan al colegio</em> desde casa</h1>
+    <p class="hero-sub">Urbanización Moyocochita — lotes de alta plusvalía con el Colegio 25 de Mayo dentro del predio, servicios básicos y seguridad jurídica garantizada.</p>
+    <a href="#formulario" class="hero-cta" onclick="scrollToForm(event)">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014 11.74 19.79 19.79 0 01.92 3.1 2 2 0 012.9.93h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+      Ver Lotes Disponibles
+    </a>
+  </div>
+  <div class="hero-scroll">
+    <span>Ver más</span>
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+  </div>
+</section>
+
+<!-- ══ BARRA DE URGENCIA ══ -->
+<div class="scarcity-bar">
+  🔥 <strong>Oferta de preventa limitada</strong> — Los lotes frente al área escolar se están agotando. Consulta hoy.
+</div>
+
+<!-- ══ TRUST / STATS ══ -->
+<section class="section" style="background: white;">
+  <div class="fade-in">
+    <div class="section-label">Por qué confían en nosotros</div>
+    <h2 class="section-title">Moyocochita: un proyecto con respaldo real</h2>
+    <p class="section-desc">Más de dos años de desarrollo, trámites completos y propietarios felices avalan nuestro trabajo en la región de Camargo.</p>
+  </div>
+  <div class="stats-grid fade-in">
+    <div class="stat-card">
+      <span class="num">+80</span>
+      <div class="lbl">Lotes vendidos hasta hoy</div>
+    </div>
+    <div class="stat-card">
+      <span class="num">100%</span>
+      <div class="lbl">Papeles al día — escrituras en orden</div>
+    </div>
+    <div class="stat-card gold">
+      <span class="num gold-num">1ra</span>
+      <div class="lbl">Urb. con colegio propio en la zona</div>
+    </div>
+    <div class="stat-card gold">
+      <span class="num gold-num">+35%</span>
+      <div class="lbl">Plusvalía proyectada a 5 años</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ COLEGIO (FACTOR DECISIVO) ══ -->
+<section class="colegio-section fade-in">
+  <div class="section-label">El factor decisivo</div>
+  <h2 class="section-title">El Colegio 25 de Mayo está dentro de la urbanización</h2>
+  <p class="section-desc">No hay que cruzar calles peligrosas ni depender de transporte escolar. Tus hijos caminan seguros cada mañana — y tu patrimonio crece junto a ellos.</p>
+
+  <div class="mapa-ilustrado">
+    <div class="mapa-inner">
+      <div class="mapa-lote">
+        <div class="mapa-icon icon-dorado">🏠</div>
+        <div class="mapa-lote-text">
+          <h4>Tu lote en Moyocochita</h4>
+          <p>Demarcado, escriturado y listo para construir</p>
+        </div>
+      </div>
+
+      <div class="mapa-connector">
+        <div class="conn-line"></div>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 8l4 4-4 4M3 12h18"/></svg>
+        <span style="white-space:nowrap">Solo pasos</span>
+        <div class="conn-line"></div>
+      </div>
+
+      <div class="mapa-lote">
+        <div class="mapa-icon icon-azul">🏫</div>
+        <div class="mapa-lote-text">
+          <h4>Colegio 25 de Mayo</h4>
+          <p>Dentro del predio — educación garantizada</p>
+        </div>
+      </div>
+
+      <div class="mapa-connector">
+        <div class="conn-line"></div>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 8l4 4-4 4M3 12h18"/></svg>
+        <span style="white-space:nowrap">Proyección</span>
+        <div class="conn-line"></div>
+      </div>
+
+      <div class="mapa-lote">
+        <div class="mapa-icon icon-verde">🎓</div>
+        <div class="mapa-lote-text">
+          <h4>Normal educativa — en proyección</h4>
+          <p>El hub educativo más completo de la región</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="highlight-pill" style="margin-top: 20px;">
+      📍 "Tus hijos caminan al colegio — tú ganas plusvalía"
+    </div>
+  </div>
+</section>
+
+<!-- ══ BENEFICIOS ══ -->
+<section class="beneficios-section fade-in">
+  <div class="section-label">Todo incluido</div>
+  <h2 class="section-title">4 razones para decidir hoy</h2>
+
+  <div class="beneficios-grid">
+    <div class="ben-card">
+      <div class="ben-icon">🛣️</div>
+      <h4>Acceso directo</h4>
+      <p>Calle pavimentada de ingreso exclusiva para la urbanización</p>
+    </div>
+    <div class="ben-card">
+      <div class="ben-icon">💧</div>
+      <h4>Agua y Luz</h4>
+      <p>Servicios básicos con trámite inmediato a tu nombre</p>
+    </div>
+    <div class="ben-card">
+      <div class="ben-icon">📄</div>
+      <h4>Seguridad jurídica</h4>
+      <p>Escrituras individuales al día — cero riesgo legal</p>
+    </div>
+    <div class="ben-card">
+      <div class="ben-icon">🌳</div>
+      <h4>Áreas verdes</h4>
+      <p>Espacios de esparcimiento y arborización planificada</p>
+    </div>
+  </div>
+
+  <div style="background: linear-gradient(135deg, var(--verde-oscuro), var(--verde)); border-radius: 16px; padding: 24px; margin-top: 24px; text-align: center;">
+    <p style="color: white; font-size: 15px; line-height: 1.6; margin-bottom: 16px;">
+      <strong style="color: var(--dorado-claro);">No vendemos promesas.</strong><br>
+      Vendemos lotes demarcados, listos para transferencia inmediata.
+    </p>
+    <a href="https://wa.me/59170000000?text=Hola%2C%20quiero%20ver%20el%20cat%C3%A1logo%20de%20lotes%20y%20planos%20de%20Moyocochita" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: white; color: var(--verde-oscuro); font-weight: 700; font-size: 14px; padding: 12px 24px; border-radius: 50px; text-decoration: none;">
+      📋 Recibir catálogo de planos
+    </a>
+  </div>
+</section>
+
+<!-- ══ GALERÍA ══ -->
+<section class="galeria-section fade-in">
+  <div class="galeria-header">
+    <div class="section-label">Imágenes reales del terreno</div>
+    <h2 class="section-title" style="color:white;">Ve lo que estás comprando</h2>
+  </div>
+
+  <div class="slider-track" id="slider">
+    <div class="slide-card">
+      <div class="slide-img">
+        <div class="slide-img-placeholder">
+          <span>🏞️</span>
+          <p>Foto del arco de entrada</p>
+        </div>
+      </div>
+      <div class="slide-body">
+        <h4>Arco de ingreso</h4>
+        <p>Entrada principal pavimentada con señalización</p>
+      </div>
+    </div>
+
+    <div class="slide-card">
+      <div class="slide-img">
+        <div class="slide-img-placeholder">
+          <span>🌿</span>
+          <p>Estacas y demarcación</p>
+        </div>
+      </div>
+      <div class="slide-body">
+        <h4>Lotes demarcados</h4>
+        <p>Cada lote con estacas y límites definidos</p>
+      </div>
+    </div>
+
+    <div class="slide-card">
+      <div class="slide-img">
+        <div class="slide-img-placeholder">
+          <span>🏫</span>
+          <p>Colegio 25 de Mayo</p>
+        </div>
+      </div>
+      <div class="slide-body">
+        <h4>Colegio 25 de Mayo</h4>
+        <p>Infraestructura educativa dentro del predio</p>
+      </div>
+    </div>
+
+    <div class="slide-card">
+      <div class="slide-img">
+        <div class="slide-img-placeholder">
+          <span>🌳</span>
+          <p>Áreas verdes</p>
+        </div>
+      </div>
+      <div class="slide-body">
+        <h4>Espacios verdes</h4>
+        <p>Zona de esparcimiento familiar planificada</p>
+      </div>
+    </div>
+
+    <div class="slide-card">
+      <div class="slide-img">
+        <div class="slide-img-placeholder">
+          <span>🗺️</span>
+          <p>Vista aérea del proyecto</p>
+        </div>
+      </div>
+      <div class="slide-body">
+        <h4>Vista panorámica</h4>
+        <p>Ubicación estratégica en Camargo</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="slider-hint">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    Desliza para ver más fotos
+  </div>
+</section>
+
+<!-- ══ CIERRE / SCARCITY ══ -->
+<section class="cierre-section fade-in">
+  <div class="section-label">Preventa limitada</div>
+  <h2 class="section-title">Últimos lotes al precio de preventa</h2>
+  <p class="cierre-desc">Una vez que termine la preventa, el precio sube. Los lotes frente al área escolar son los que más rápido se agotan.</p>
+
+  <div class="lotes-counter">
+    <div class="big-num" id="counter-num">27</div>
+    <p>lotes disponibles en preventa promocional</p>
+    <div class="progress-bar-wrap">
+      <div class="progress-bar-fill"></div>
+    </div>
+    <div class="progress-label">
+      <span>0 disponibles</span>
+      <span style="color: var(--dorado-claro); font-weight:600;">73% vendido</span>
+      <span>100 lotes totales</span>
+    </div>
+  </div>
+
+  <a href="https://wa.me/59170000000?text=Hola%2C%20vi%20el%20mapa%20y%20quiero%20el%20lote%20m%C3%A1s%20cercano%20al%20Colegio%2025%20de%20Mayo.%20%C2%BFCu%C3%A1l%20es%20el%20precio%20de%20preventa%3F" target="_blank" class="cierre-cta" onclick="showToast()">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+    Consultar Precio de Preventa Ahora
+  </a>
+  <p class="precio-note">🔒 No mostramos el precio en la web — escríbenos y recibe el catálogo personalizado</p>
+</section>
+
+<!-- ══ FORMULARIO ══ -->
+<section class="form-section fade-in" id="formulario">
+  <div class="section-label">Reserva tu consulta</div>
+  <h2 class="section-title">¿Cuándo quieres tu lote?</h2>
+  <p class="section-desc">Solo 3 datos y nuestro equipo te contacta en menos de 2 horas con precios, planos y opciones de pago.</p>
+
+  <div class="form-card">
+    <div id="form-body">
+      <div class="form-group">
+        <label for="nombre">Tu nombre completo</label>
+        <input type="text" id="nombre" placeholder="Ej. Carlos Mamani" autocomplete="name">
+      </div>
+      <div class="form-group">
+        <label for="whatsapp">Número de WhatsApp</label>
+        <input type="tel" id="whatsapp" placeholder="+591 7X XXX XXX" autocomplete="tel">
+      </div>
+      <div class="form-group">
+        <label for="cuando">¿Para cuándo busca comprar?</label>
+        <select id="cuando">
+          <option value="" disabled selected>Selecciona una opción</option>
+          <option value="inmediato">Lo antes posible (este mes)</option>
+          <option value="3meses">En los próximos 3 meses</option>
+          <option value="6meses">Entre 3 y 6 meses</option>
+          <option value="explorando">Solo estoy evaluando opciones</option>
+        </select>
+      </div>
+      <button class="form-submit" onclick="submitForm()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014 11.74 19.79 19.79 0 01.92 3.1 2 2 0 012.9.93h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+        Quiero ser contactado hoy
+      </button>
+      <p class="form-privacy">🔒 Tus datos son confidenciales. No hacemos spam.</p>
+    </div>
+
+    <div class="form-success" id="form-success">
+      <div class="success-icon">✅</div>
+      <h3>¡Perfecto, <span id="success-nombre">amigo</span>!</h3>
+      <p>Tu consulta fue registrada con éxito. Nuestro equipo de ventas te contactará por WhatsApp en las próximas 2 horas con precios, planos y opciones de pago exclusivos.</p>
+      <a href="https://wa.me/59170000000?text=Hola%2C%20acabo%20de%20completar%20el%20formulario%20de%20Moyocochita" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; margin-top: 20px; background: #25D366; color: white; font-weight: 700; font-size: 14px; padding: 12px 24px; border-radius: 50px; text-decoration: none;">
+        💬 Hablar ahora por WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ MAPA ══ -->
+<section class="mapa-section fade-in">
+  <div class="section-label">Ubicación</div>
+  <h2 class="section-title">Encuéntranos en Camargo</h2>
+  <p class="section-desc">Urbanización Moyocochita, Camargo, Chuquisaca — Bolivia.</p>
+
+  <!-- Reemplazar src con el embed real de Google Maps -->
+  <div class="mapa-placeholder">
+    <span>📍</span>
+    <p>Urbanización Moyocochita</p>
+    <small>Camargo, Chuquisaca · Bolivia</small>
+    <a href="https://maps.google.com/?q=Camargo+Chuquisaca+Bolivia" target="_blank" style="margin-top: 12px; background: var(--verde); color: white; padding: 10px 20px; border-radius: 50px; font-size: 13px; font-weight: 600; text-decoration: none;">
+      Abrir en Google Maps →
+    </a>
+  </div>
+
+  <!-- Para activar el mapa real, reemplaza el div .mapa-placeholder con: -->
+  <!-- <div class="mapa-embed"><iframe src="TU_EMBED_URL_DE_GOOGLE_MAPS" allowfullscreen loading="lazy"></iframe></div> -->
+
+  <div class="como-llegar">
+    <span>🚗</span>
+    <div>
+      <h4>¿Cómo llegar?</h4>
+      <p>Entrada principal con arco de ingreso sobre la vía principal de Camargo. Nuestro equipo puede enviarte el pin exacto por WhatsApp.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PIE ══ -->
+<footer>
+  <strong>Urbanización Moyocochita</strong><br>
+  Camargo, Chuquisaca · Bolivia<br>
+  <br>
+  <span style="color: rgba(255,255,255,0.4); font-size: 11px;">
+    © 2025 Moyocochita. Todos los derechos reservados.<br>
+    Código de tracking: <strong style="color: rgba(255,255,255,0.3);">Web_Moyocochita_V1</strong>
+  </span>
+  <div class="footer-links">
+    <a href="https://wa.me/59170000000" target="_blank">WhatsApp</a>
+    <a href="#formulario">Contacto</a>
+  </div>
+</footer>
+
+<script>
+  // Fade-in on scroll
+  const fadeEls = document.querySelectorAll('.fade-in');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  fadeEls.forEach(el => observer.observe(el));
+
+  // Trigger hero immediately
+  document.querySelector('.hero .fade-in')?.classList.add('visible');
+
+  // Form submission
+  function submitForm() {
+    const nombre = document.getElementById('nombre').value.trim();
+    const whatsapp = document.getElementById('whatsapp').value.trim();
+    const cuando = document.getElementById('cuando').value;
+
+    if (!nombre) { alert('Por favor ingresa tu nombre'); return; }
+    if (!whatsapp) { alert('Por favor ingresa tu WhatsApp'); return; }
+    if (!cuando) { alert('Por favor selecciona cuándo buscas comprar'); return; }
+
+    // Simular envío (aquí conectar con n8n webhook)
+    const webhookData = {
+      nombre,
+      whatsapp,
+      cuando,
+      origen: 'Web_Moyocochita_V1',
+      timestamp: new Date().toISOString(),
+      utm: window.location.search
+    };
+
+    console.log('Lead capturado:', webhookData);
+
+    // Aquí va el fetch al webhook n8n:
+    // fetch('TU_URL_DE_N8N_WEBHOOK', {
+    //   method: 'POST',
+    //   headers: { 'Content-Type': 'application/json' },
+    //   body: JSON.stringify(webhookData)
+    // });
+
+    // Mostrar confirmación
+    document.getElementById('form-body').style.display = 'none';
+    document.getElementById('form-success').style.display = 'block';
+    document.getElementById('success-nombre').textContent = nombre.split(' ')[0];
+
+    // Abrir WhatsApp automáticamente con mensaje personalizado
+    const msg = encodeURIComponent(
+      `Hola, soy ${nombre}. Completé el formulario de Moyocochita y me interesa comprar ${cuando === 'inmediato' ? 'lo antes posible' : cuando === '3meses' ? 'en los próximos 3 meses' : 'próximamente'}. ¿Pueden enviarme el catálogo de lotes y precios? Mi WhatsApp: ${whatsapp}`
+    );
+    setTimeout(() => {
+      window.open(`https://wa.me/59170000000?text=${msg}`, '_blank');
+    }, 800);
+  }
+
+  function scrollToForm(e) {
+    e.preventDefault();
+    document.getElementById('formulario').scrollIntoView({ behavior: 'smooth' });
+  }
+
+  function showToast() {
+    const toast = document.getElementById('toast');
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 2500);
+  }
+
+  // Animación del contador de lotes (cuenta hacia abajo desde 100 hasta 27)
+  function animateCounter() {
+    const el = document.getElementById('counter-num');
+    let current = 100;
+    const target = 27;
+    const step = () => {
+      if (current > target) {
+        current -= 3;
+        if (current < target) current = target;
+        el.textContent = current;
+        requestAnimationFrame(step);
+      }
+    };
+    step();
+  }
+
+  // Activar contador cuando sea visible
+  const counterSection = document.querySelector('.cierre-section');
+  const counterObserver = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting) {
+      animateCounter();
+      counterObserver.unobserve(counterSection);
+    }
+  }, { threshold: 0.3 });
+  if (counterSection) counterObserver.observe(counterSection);
+</script>
+</body>
+</html>

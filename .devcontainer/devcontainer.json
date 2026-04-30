@@ -1,0 +1,45 @@
+{
+  "name": "Moyocochita-pageWeb",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "workspaceFolder": "/workspace",
+  "mounts": [
+    {
+      "source": "/home/emercado/emercado_data/Web-Site/2026/Moyocochita-landingPage",
+      "target": "/workspace",
+      "type": "bind"
+    }
+  ],
+  "forwardPorts": [3010],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        // AI & Productivity
+        "google.geminicodeassist",
+        "codeium.windsurf",
+        "openai.chatgpt",
+        // Language Features
+        "vscode.typescript-language-features",
+        "vscode.html-language-features",
+        "vscode.css-language-features",
+        "vscode.json-language-features",
+        // Git
+        "eamodio.gitlens",
+        "vscode.git",
+        // Debugging
+        "ms-vscode.js-debug",
+        // Live Server
+        "ritwickdey.LiveServer"
+      ],
+      "settings": {
+        "editor.formatOnSave": true,
+        "terminal.integrated.defaultProfile.linux": "bash"
+      }
+    }
+  },
+  "remoteUser": "root",
+  "postCreateCommand": "npm install",
+  // AÑADE ESTO PARA EL ARRANQUE AUTOMÁTICO:
+  "postAttachCommand": "cd /workspace && npm run dev"
+}
