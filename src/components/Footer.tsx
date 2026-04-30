@@ -3,7 +3,7 @@ export default function Footer() {
     <footer className="py-12 sm:py-20 bg-white px-4 sm:px-6">
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-2xl sm:text-4xl md:text-5xl font-black text-blue-900 mb-6 sm:mb-8 leading-tight italic">
-          "Invierte hoy en tu futuro en una de las zonas con mayor proyección del sur de Bolivia"
+          &ldquo;Invierte hoy en tu futuro en una de las zonas con mayor proyección del sur de Bolivia&rdquo;
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-12 sm:mb-16">
