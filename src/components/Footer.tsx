@@ -13,15 +13,15 @@ export default function Footer() {
           >
             <i className="fab fa-whatsapp text-3xl sm:text-4xl text-[#25D366] mb-3 sm:mb-4"></i>
             <span className="text-xs sm:text-sm font-bold text-gray-500 uppercase">Principal</span>
-            <span className="text-xl sm:text-2xl font-black text-blue-900">75525618</span>
+            <span className="text-xl sm:text-2xl font-black text-blue-900">64531013</span>
           </a>
           <a
-            href="tel:59177870963"
+            href="tel:59175525618"
             className="bg-blue-50 p-6 sm:p-8 rounded-2xl sm:rounded-3xl border border-blue-100 flex flex-col items-center group transition hover:bg-blue-100"
           >
             <i className="fas fa-phone-alt text-3xl sm:text-4xl text-blue-900 mb-3 sm:mb-4"></i>
             <span className="text-xs sm:text-sm font-bold text-gray-500 uppercase">Alternativo</span>
-            <span className="text-xl sm:text-2xl font-black text-blue-900">77870963</span>
+            <span className="text-xl sm:text-2xl font-black text-blue-900">75525618</span>
           </a>
         </div>
 
