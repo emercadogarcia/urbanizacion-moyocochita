@@ -8,7 +8,7 @@ export default function Footer() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-12 sm:mb-16">
           <a
-            href="https://wa.me/59175525618"
+            href="https://wa.me/59164531013"
             className="bg-green-50 p-6 sm:p-8 rounded-2xl sm:rounded-3xl border border-green-100 flex flex-col items-center group transition hover:bg-green-100"
           >
             <i className="fab fa-whatsapp text-3xl sm:text-4xl text-[#25D366] mb-3 sm:mb-4"></i>

@@ -16,7 +16,7 @@ export default function HeroSection() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center px-4">
           <a
-            href="https://wa.me/59175525618?text=Hola%20me%20interesa%20solicitar%20informacion%20sobre%20los%20lotes%20de%20la%20Urbanizacion%20Moyocochita" target="_blank" rel="noopener noreferrer"
+            href="https://wa.me/59164531013?text=Hola%20me%20interesa%20solicitar%20informacion%20sobre%20los%20lotes%20de%20la%20Urbanizacion%20Moyocochita" target="_blank" rel="noopener noreferrer"
             className="btn-shine bg-yellow-400 text-blue-900 font-extrabold px-6 sm:px-10 py-4 sm:py-5 rounded-2xl shadow-2xl hover:shadow-yellow-400/20 transition-all text-sm sm:text-lg flex items-center justify-center"
           >
             SOLICITAR INFORMACIÓN <i className="fas fa-arrow-right ml-2 sm:ml-3 text-xs sm:text-sm"></i>

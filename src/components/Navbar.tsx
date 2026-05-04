@@ -43,7 +43,7 @@ export default function Navbar() {
             Lotes
           </a>
           <a
-            href="https://wa.me/59175525618?text=Me%20interesa%20obtener%20información%20sobre%20los%20lotes" target="_blank" rel="noopener noreferrer"
+            href="https://wa.me/59164531013?text=Me%20interesa%20obtener%20información%20sobre%20los%20lotes" target="_blank" rel="noopener noreferrer"
             className="bg-blue-900 text-white px-4 sm:px-6 py-1.5 sm:py-2 rounded-full hover:bg-blue-800 transition shadow-lg"
           >
             Contactar
@@ -85,7 +85,7 @@ export default function Navbar() {
               Lotes
             </a>
             <a
-              href="https://wa.me/59175525618?text=Me%20interesa%20obtener%20información%20sobre%20los%20lotes" target="_blank" rel="noopener noreferrer"
+              href="https://wa.me/59164531013?text=Me%20interesa%20obtener%20información%20sobre%20los%20lotes" target="_blank" rel="noopener noreferrer"
               className="block bg-blue-900 text-white text-center font-bold uppercase text-sm py-3 rounded-full hover:bg-blue-800 transition"
               onClick={() => setMobileMenuOpen(false)}
             >
