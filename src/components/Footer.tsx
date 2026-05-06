@@ -38,7 +38,7 @@ export default function Footer() {
               Instagram
             </a>
             <a href="#" className="hover:text-blue-900 text-xs sm:text-sm">
-              Ubicación Maps 
+              Ubicación Maps
             </a>
           </div>
         </div>
